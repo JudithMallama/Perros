@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+
+
 :root{
     --primary--color: #00539f;
+    --tittle--font:"Ga Maamli", sans-serif;
+    --text--font: "Roboto", sans-serif;
 }
 *{
     margin: 0px;
@@ -37,7 +43,6 @@ html {
     flex: 1 1 80%;
     width: 90%;
     text-align: center;
-   
 }
 /*  NAVBAR */
 .header_nav{  
@@ -74,9 +79,47 @@ html {
 #check{
     display: none;
 }
+/* MAIN */
+.main_content{
+    display: flex;
+    margin: 10px;
+    text-align: justify;
+    font-family: var(--text--font);
+}
+.main_content_principal{
+    width: 60vw;
+    margin: 10px;
+}
+.main_content_recomendations{
+    width: 25vw;
+    margin: 10px;
+}
+.main_content_principal h1{
+    font-family: var(--tittle--font);    
+    font-size: 50px;  
+    color: white;
+    text-align: center;
+}
+.main_content_principal figure{
+    text-align: center;
+}
+.main_content_principal_img{
+    width: 50vw;
+    height: auto;
+}
+
+.main_content_principal table img{
+    width: 20px;
+    height: auto;
+
+}
+.main_content_recomendations img {
+    width: 200px;
+    height: auto;
+}
+
 /* Estilo para tablets */
 @media (max-width: 952px) {
-
     .body_content{
         width: 90%;
     }
@@ -86,6 +129,14 @@ html {
         padding: 7px 7px;
         border-radius: 3px;
     }
+    /* MAIN */
+    .main_content{
+        display: flex;
+        margin: 10px;
+        text-align: justify;
+        font-family: var(--text--font);
+    }
+    
 }
 
 /* Estilo para tablets */
@@ -139,7 +190,16 @@ html {
     #check:checked ~ ul {
         left: 0;
     }
-
+    /* MAIN */
+    .main_content{
+        display: block;
+    }
+    .main_content_principal{
+        width: 90vw;
+    }
+    .main_content_recomendations{
+        width: 90vw;
+    }  
 }
 
 
