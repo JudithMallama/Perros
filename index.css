@@ -18,8 +18,6 @@ html {
     background-image: radial-gradient(#00539f 0.5px, #e5e5f7 0.5px);
     background-size: 10px 10px;
 }
-/*develo*/
-/*Rama feature/navbar*/
 .body_content{
     background-image: linear-gradient(to bottom, #00539f, #6579b6, #9ea2ce, #d0cfe6, #ffffff);
     width: 80%;
@@ -107,17 +105,37 @@ html {
     width: 50vw;
     height: auto;
 }
-
 .main_content_principal table img{
     width: 20px;
     height: auto;
-
+}
+.main_content_recomendations figure{
+    text-align: center;
 }
 .main_content_recomendations img {
-    width: 200px;
+    width: 90%;
     height: auto;
+    text-align: center;
 }
 
+/* TABLAS */
+.main_content_principal table{
+    border-collapse: separate;
+    border: 2px solid rgb(74, 36, 99);
+    font-family: sans-serif;
+    text-align: center; 
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.main_content_principal thead{
+    background-color: #d7d8ff;
+}
+.main_content_principal th,
+td{
+    border: 1px solid rgb(74, 36, 99);
+    padding: 8px 10px;
+  }
 /* Estilo para tablets */
 @media (max-width: 952px) {
     .body_content{
@@ -136,6 +154,42 @@ html {
         text-align: justify;
         font-family: var(--text--font);
     }
+    /* TABLAS*/
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    td:before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        transform: translateY(-50%);
+        text-align: left;
+    }
+    td:nth-of-type(1):before { content: "MASCOTA";}
+    td:nth-of-type(2):before { content: "ALIMENTO"; }
+    td:nth-of-type(3):before { content: "CANTIDAD"; }
+    td:nth-of-type(4):before { content: "INGESTA CALÓRICA (Kcal)"; }
+    td:nth-of-type(5):before { content: "EXCESO DIARIO DE INGESTA CALÓRICA +"; }
+    td:nth-of-type(6):before { content: "EQUIVALENTE EN DONUTS PARA HUMANOS"; }
     
 }
 
@@ -154,6 +208,10 @@ html {
         font-size: 12px;
         padding: 7px 2px;
         border-radius: 3px;
+    }
+    /* TABLAS*/
+    .main_content_principal table, thead, tbody, th, td, tr {
+        display: block;
     }
 }
 
@@ -200,6 +258,15 @@ html {
     .main_content_recomendations{
         width: 90vw;
     }  
+    /*TABLAS*/
+    td:before {
+        top: 10px;
+        left: 10px;
+        transform: translateY(0);
+    }
+    td {
+        padding-left: 60%;
+    }
 }
 
 
